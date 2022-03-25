@@ -38,7 +38,7 @@ def compareWalks(file1, file2):
     # reading files
     f1 = open(file1, "r")  
     f2 = open(file1, "r") 
-    f3 = open(file1 + '_' + file2 + '_' + 'differences.txt', 'w)
+    f3 = open(file1 + '_' + file2 + '_' + 'differences.txt', 'w')
     i = 0
     for line1 in f1:
         i += 1
