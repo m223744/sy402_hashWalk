@@ -24,8 +24,8 @@ with open(str(date) + '_fullWalk.txt', 'w') as g:
                         if not data:
                             break
                         sha256.update(data)
-                    g.write(fullpath + ' hash: ' + sha256.hexdigest() + ' ' + str(date) + '\n')
-            except IsADirectoryError:
+                    g.write(fullpath + ' ' + sha256.hexdigest() + ' ' + str(date) + '\n')
+            except IsADirectoryError or FileNotFoundError:
                 pass
 
 
