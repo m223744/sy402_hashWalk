@@ -38,6 +38,7 @@ def compareWalks(file1, file2):
     # reading files
     f1 = open(file1, "r")  
     f2 = open(file1, "r") 
+    f3 = open(file1 + '_' + file2 + '_' + 'differences.txt', 'w)
     i = 0
     for line1 in f1:
         i += 1
@@ -50,10 +51,12 @@ def compareWalks(file1, file2):
                 # else print that line from both files
                 print("\tFile 1:", line1, end='')
                 print("\tFile 2:", line2, end='')
+                f3.write(line1 + line2 + '\n')
             break
     # closing files
     f1.close()                                       
     f2.close()    
+    f3.close()
  
 def main():
     x = input("Compare two dirwalks? [y/n]")
