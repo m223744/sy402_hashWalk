@@ -44,14 +44,14 @@ def compareWalks(file1, file2):
         i += 1
         for line2 in f2:
             # matching line1 from both files
-            if line1 == line2:  
+            if line1.split(' ')[0:2] == line2.split(' ')[0:2]:  
                 continue       
             else:
                 print("Line ", i, ":")
                 # else print that line from both files
                 print("\tFile 1:", line1, end='')
                 print("\tFile 2:", line2, end='')
-                f3.write(line1 + line2 + '\n')
+                f3.write(line1 + ' ' + line2 + '\n')
             break
     # closing files
     f1.close()                                       
@@ -72,7 +72,7 @@ if __name__ == '__main__':
     length = len(sys.argv)
     if length not in [2,3]: 
         usage()
-    elif length == 2 and 'r' in sys.argv:
+    elif length == 2 and '-r' in sys.argv:
         dirWalk()
     elif length == 3:
         if os.path.isfile(sys.argv[1]) and os.path.isfile(sys.argv[2]):
