@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import os, hashlib, datetime
+#
 
 # traverse root directory, and list directories as dirs and files as files
 # https://stackoverflow.com/questions/19859840/excluding-directories-in-os-walk
