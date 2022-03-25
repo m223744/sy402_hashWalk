@@ -51,9 +51,9 @@ def compareWalks(file1, file2):
                 print("\tFile 1:", line1, end='')
                 print("\tFile 2:", line2, end='')
             break
-# closing files
-f1.close()                                       
-f2.close()    
+    # closing files
+    f1.close()                                       
+    f2.close()    
  
 def main():
     x = input("Compare two dirwalks? [y/n]")
@@ -73,7 +73,7 @@ if __name__ == '__main__':
         dirWalk()
     elif length == 3:
         if os.path.isfile(sys.argv[1]) and os.path.isfile(sys.argv[2]):
-            pass
+            compareWalks(sys.argv[1], sys.argv[2])
         else:
             print("One of these files is not valid. Exiting.")
             exit(1) 
